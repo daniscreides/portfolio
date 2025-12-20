@@ -11,11 +11,15 @@ export default function App() {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.hash) {
-      const section = document.getElementById(location.hash.substring(1));
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
-      }
+    const hash = location.hash ? location.hash.substring(1) : null;
+    if (hash) {
+      // Dá um pequeno delay para garantir que a seção exista no DOM
+      setTimeout(() => {
+        const section = document.getElementById(hash);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 50);
     }
   }, [location]);
 
@@ -35,10 +39,8 @@ export default function App() {
               </>
             }
           />
-
           <Route path="/certificacoes" element={<Certificacoes />} />
         </Routes>
-        
       </main>
 
       <Footer />
