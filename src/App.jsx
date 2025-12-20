@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Projetos from "./components/Projetos";
 import Certificacoes from "./pages/Certificacoes";
 import Contato from "./components/Contato";
+import Footer from "./components/Footer";
 
 export default function App() {
   const location = useLocation();
