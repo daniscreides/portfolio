@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('./assets/fontes/Work_Sans/static/WorkSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kanit';
+  src: url('./assets/fontes/Kanit/Kanit-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Tech';
+  src: url('./assets/fontes/Share_Tech/ShareTech-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal; 
+}
+
+:root {
+  --cor0: #E0E0E0;
+  --cor1: #485177;
+  --cor2: #2F3658;
+  --cor3: #1E264A;
+  --cor4: #0F1635;
+  --cor5: #04091F;
+}
+
+body {
+  font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+  background-color: var(--cor5);
+  color: var(--cor0);
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
