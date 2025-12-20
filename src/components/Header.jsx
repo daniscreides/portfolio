@@ -1,18 +1,17 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export default function Header() {
   const location = useLocation();
+  const navigate = useNavigate();
   const [openContato, setOpenContato] = useState(false);
   const dropdownRef = useRef(null);
-
-  const base = "/portfolio";
 
   const handleScroll = (e, id) => {
     e.preventDefault();
 
-    if (location.pathname !== base + "/") {
-      window.location.href = `${base}/#${id}`;
+    if (location.pathname !== "/") {
+      navigate("/#" + id);
     } else {
       const section = document.getElementById(id);
       if (section) {
@@ -26,29 +25,45 @@ export default function Header() {
       case "email":
         window.location.href = "mailto:danielisouza436@gmail.com";
         break;
+
       case "whatsapp":
         window.open("https://wa.me/5583991427003", "_blank");
         break;
+
       case "linkedin":
-        window.open("https://www.linkedin.com/in/daniscreides", "_blank");
+        window.open(
+          "https://www.linkedin.com/in/daniscreides",
+          "_blank"
+        );
         break;
+
       case "github":
-        window.open("https://github.com/daniscreides", "_blank");
+        window.open(
+          "https://github.com/daniscreides",
+          "_blank"
+        );
         break;
+
       default:
         break;
     }
+
     setOpenContato(false);
   };
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target)
+      ) {
         setOpenContato(false);
       }
     };
+
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    return () =>
+      document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const contatos = [
