@@ -18,8 +18,25 @@ const certificacoes = [
 
 export default function Certificacoes() {
   return (
-    <section id="certificacoes" className="py-20 px-4 md:px-20 scroll-mt-28">
-      <h2 className="text-3xl font-bold mb-8 text-center">
+    <section
+      id="certificacoes"
+      className="py-20 px-4 md:px-20 scroll-mt-28"
+    >
+      <h2
+        className="
+          text-[18px]
+          sm:text-[22px]
+          md:text-[26px]
+          font-bold
+          mt-0
+          sm:mt-1
+          md:mt-0
+          mb-6
+          sm:mb-7
+          md:mb-8
+          text-center
+        "
+      >
         CERTIFICAÇÕES
       </h2>
 
@@ -30,14 +47,17 @@ export default function Certificacoes() {
             className="
               bg-[#1E264A]
               p-2
-              rounded-xl 
-              border border-[#2F3658]/60 
-              shadow-md 
-              hover:shadow-[0_0_15px_rgba(255,255,255,0.15)] 
-              hover:scale-105 
-              transition-all 
-              duration-300 
-              h-[290px]
+              rounded-xl
+              border border-[#2F3658]/60
+              shadow-md
+              hover:shadow-[0_0_15px_rgba(255,255,255,0.15)]
+              hover:scale-105
+              transition-all
+              duration-300
+              h-[220px]
+              sm:h-[240px]
+              md:h-[270px]
+
               flex
               flex-col
               items-center
@@ -54,7 +74,17 @@ export default function Certificacoes() {
               <div className="w-20 h-20 mb-4"></div>
             )}
 
-            <h3 className="font-bold text-xl mb-2 w-full text-center">
+            <h3
+              className="
+                font-bold
+                text-[14px]
+                sm:text-[16px]
+                md:text-xl
+                mb-2
+                w-full
+                text-center
+              "
+            >
               {c.titulo}
             </h3>
           </div>

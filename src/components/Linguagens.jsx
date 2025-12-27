@@ -14,12 +14,16 @@ const Linguagens = () => {
   ];
 
   return (
-    <div className="linguagens w-full max-w-[40em] mx-auto">
+    <div className="w-full max-w-[640px]">
       <ol
         className="
           grid
-          grid-cols-2 sm:grid-cols-3 md:grid-cols-3
-          gap-4 sm:gap-4
+          grid-cols-2
+          md:grid-cols-2
+          lg:grid-cols-3
+          gap-[8px]
+          md:gap-[12px]
+          lg:gap-[16px]
           list-none
           p-0
         "
@@ -28,22 +32,37 @@ const Linguagens = () => {
           <li
             key={index}
             className="
+              w-full
+              box-border
               flex
               justify-center
               items-center
               text-center
-              text-lg sm:text-xl font-bold tracking-wide
+              text-[10px]
+              md:text-[10px]
+              lg:text-[20px]
+              font-bold
+              tracking-wide
               text-[#E0E0E0]
               bg-[#1E264A]
-              px-4 sm:px-5 py-1 sm:py-3
+              px-[6px]
+              py-[6px]
+              md:px-[8px]
+              md:py-[8px]
+              lg:px-[14px]
+              lg:py-[10px]
+              whitespace-normal
+              break-words
               rounded-lg
-              border border-[#2F3658]
-              transition-all duration-300
+              border
+              border-[#2F3658]
+              transition-transform
+              duration-300
               cursor-pointer
               shadow-md
               hover:bg-[#2F3658]
               hover:border-[#485177]
-              hover:scale-105
+              lg:hover:scale-105
               hover:shadow-lg
             "
           >
