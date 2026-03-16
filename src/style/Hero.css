@@ -1,0 +1,176 @@
+/* ================= HERO BASE ================= */
+
+.hero {
+  min-height: 100vh;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* ================= BACKGROUND ================= */
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite;
+}
+
+.circle-1 {
+  width: 400px;
+  height: 400px;
+  top: 25%;
+  left: 25%;
+  background: radial-gradient(circle, rgba(181, 95, 235, 0.15) 0%, transparent 70%);
+}
+
+.circle-2 {
+  width: 350px;
+  height: 350px;
+  bottom: 25%;
+  right: 25%;
+  background: radial-gradient(circle, rgba(146, 71, 217, 0.15) 0%, transparent 70%);
+  animation-delay: -3s;
+}
+
+/* ================= CONTENT ================= */
+
+.hero-content {
+  max-width: 900px;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-welcome {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  opacity: 0.5;
+  color: var(--action-primary);
+}
+
+.hero-title {
+  font-family: "Syne", sans-serif;
+  font-size: 62px;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg,
+      var(--action-primary),
+      var(--action-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
+
+.hero-description {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  margin: 0 auto 100px;
+  opacity: 0.5;
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+
+/* ================= BUTTONS ================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
+
+.btn-primary {
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--text-primary);
+  opacity: 0.9;
+  background: linear-gradient(135deg, var(--action-primary), var(--action-secondary));
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--text-primary);
+  opacity: 0.9;
+  border: 2px solid var(--action-primary);
+  transition: 0.3s ease;
+}
+
+.btn-secondary:hover {
+  transform: scale(1.05);
+}
+
+/* ================= SCROLL ICON ================= */
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-25px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -10px); }
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 768px) {
+
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+}
