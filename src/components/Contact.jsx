@@ -7,7 +7,7 @@ export default function Contact() {
   const [loading, setLoading] = useState(false);
 
   const form = useRef();
-  const isSending = useRef(false); // 🔒 trava real
+  const isSending = useRef(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -46,24 +46,50 @@ export default function Contact() {
       <h2 className="contact-title gradient-text">Contatos</h2>
 
       <form ref={form} onSubmit={handleSubmit} className="contact-form">
+
         <div className="form-row">
-          <input type="text" name="name" placeholder="Name" required />
-          <input type="email" name="email" placeholder="E-mail" required />
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            required
+            className="contact-input"
+          />
+
+          <input
+            type="email"
+            name="email"
+            placeholder="E-mail"
+            required
+            className="contact-input"
+          />
         </div>
 
-        <input type="text" name="titulo" placeholder="Subject" required />
+        <input
+          type="text"
+          name="titulo"
+          placeholder="Subject"
+          required
+          className="contact-input full-width"
+        />
 
-        <textarea name="message" placeholder="Message" required />
+        <textarea
+          name="message"
+          placeholder="Message"
+          required
+          className="contact-textarea"
+        />
 
-        <button
-          type="submit"
-          disabled={loading}
-          onClick={(e) => {
-            if (loading) e.preventDefault();
-          }}
-        >
-          {loading ? "Enviando..." : sent ? "Enviado ✓" : "ENVIAR"}
-        </button>
+        <div className="form-row button-row">
+          <button
+            type="submit"
+            className="contact-button"
+            disabled={loading}
+          >
+            {loading ? "Enviando..." : sent ? "Enviado ✓" : "ENVIAR"}
+          </button>
+        </div>
+
       </form>
     </section>
   );
