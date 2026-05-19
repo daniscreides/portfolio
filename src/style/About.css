@@ -51,12 +51,61 @@
   font-family: "Inter", sans-serif;
 }
 
-@media (max-width: 900px) {
+@media (min-width: 1200px) {
+  .about {
+    padding: 80px 40px;
+  }
+
   .about-title {
-    font-size: 28px;
+    font-size: 42px;
   }
 
   .about-description {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  .about {
+    padding: 60px 30px;
+  }
+
+  .about-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .gradient-text-sobre {
+    font-size: 14px;
+  }
+
+  .about-description {
+    font-size: 14px;
     text-align: center;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding: 20px;
+  }
+
+  .about-content {
+    width: 100%;
+  }
+
+  .about-title {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .gradient-text-sobre {
+    font-size: 14px;
+  }
+
+  .about-description {
+    font-size: 14px;
+    line-height: 1.5;
   }
 }

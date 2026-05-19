@@ -3,24 +3,19 @@ import "../style/Hero.css";
 export default function Hero() {
   return (
     <section id="home" className="hero">
-
       <div className="hero-bg">
         <div className="bg-circle circle-1"></div>
         <div className="bg-circle circle-2"></div>
       </div>
 
       <div className="hero-content">
-        <p className="hero-welcome">
-          Bem-Vindo ao meu portfolio.
-        </p>
+        <p className="hero-welcome">Bem-Vindo ao meu portfolio.</p>
 
         <h1 className="hero-title">
           Danieli <span className="gradient-text">Souza</span>
         </h1>
 
-        <p className="hero-subtitle">
-          Full-Stack Developer
-        </p>
+        <p className="hero-subtitle">FullStack Developer</p>
 
         <p className="hero-description">
           Transformar ideias em código e criar soluções que fazem a diferença.
@@ -50,7 +45,6 @@ export default function Hero() {
           <path d="M12 5v14M5 12l7 7 7-7" />
         </svg>
       </div>
-
     </section>
   );
 }

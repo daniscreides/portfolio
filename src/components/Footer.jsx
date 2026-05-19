@@ -9,7 +9,6 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-
         <p className="footer-text">
           © {year} Danieli Souza. Todos os direitos reservados.
         </p>
@@ -45,16 +44,6 @@ export default function Footer() {
             <img src={Linkedin} alt="LinkedIn" />
           </a>
         </div>
-
-        <div className="footer-links">
-          <a href="#" className="footer-link">
-            Política de Privacidade
-          </a>
-          <a href="#" className="footer-link">
-            Termos de Uso
-          </a>
-        </div>
-
       </div>
     </footer>
   );

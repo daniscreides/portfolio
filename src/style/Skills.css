@@ -1,5 +1,6 @@
 .skills {
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   margin: auto;
   padding: 50px 24px;
   background: var(--bg-primary);
@@ -58,18 +59,14 @@
 }
 
 .skill-tag:hover {
-  background: linear-gradient(
-    135deg,
-    var(--action-primary),
-    var(--action-secondary)
-  );
+  background: linear-gradient(135deg,
+      var(--action-primary),
+      var(--action-secondary));
   color: var(--text-primary);
   border-color: transparent;
   transform: translateY(-4px);
   box-shadow: 0 10px 25px var(--shadow-color);
 }
-
-/* ===== NEW CARD STYLE ===== */
 
 .card {
   background: var(--bg-card);
@@ -103,19 +100,15 @@
 }
 
 .gradient-1 {
-  background: linear-gradient(
-    135deg,
-    var(--action-primary),
-    var(--action-secondary)
-  );
+  background: linear-gradient(135deg,
+      var(--action-primary),
+      var(--action-secondary));
 }
 
 .gradient-2 {
-  background: linear-gradient(
-    135deg,
-    var(--action-secondary),
-    var(--action-primary)
-  );
+  background: linear-gradient(135deg,
+      var(--action-secondary),
+      var(--action-primary));
 }
 
 .card-subtitle {
@@ -124,8 +117,6 @@
   color: var(--text-primary);
   opacity: 0.7;
 }
-
-/* ===== PROGRESS BARS ===== */
 
 .skill-bar-item {
   margin-bottom: 20px;
@@ -150,26 +141,119 @@
 .progress-fill {
   height: 100%;
   border-radius: 999px;
-  background: linear-gradient(
-    90deg,
-    var(--action-primary),
-    var(--action-secondary)
-  );
+  background: linear-gradient(90deg,
+      var(--action-primary),
+      var(--action-secondary));
   transition: width 0.6s ease;
 }
 
-/* ===== RESPONSIVE ===== */
-
-@media (max-width: 768px) {
+@media (min-width: 1200px) {
   .skills {
-    width: 100%;
+    padding: 80px 40px;
+  }
+
+  .skills-title {
+    font-size: 42px;
+  }
+
+  .skills-grid {
+    gap: 70px;
+  }
+
+  .card {
+    padding: 36px;
+  }
+
+  .skill-tag {
+    font-size: 15px;
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .skills {
+    padding: 20px;
   }
 
   .skills-grid {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
 
   .skills-title {
-    font-size: 28px;
+    font-size: 30px;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .card-header {
+    margin-bottom: 18px;
+  }
+
+  .skill-tag {
+    font-size: 13px;
+    padding: 9px 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills {
+    padding: 20px;
+  }
+
+  .skills-header {
+    margin-bottom: 28px;
+  }
+
+  .skills-title {
+    font-size: 24px;
+  }
+
+  .skills-grid {
+    gap: 22px;
+  }
+
+  .card {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .card-header {
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .card-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+
+  .skills-group-title {
+    font-size: 14px;
+  }
+
+  .card-subtitle {
+    font-size: 12px;
+  }
+
+  .skills-tags {
+    gap: 10px;
+  }
+
+  .skill-tag {
+    font-size: 12px;
+    padding: 8px 14px;
+    border-radius: 12px;
+  }
+
+  .skill-info {
+    font-size: 12px;
+  }
+
+  .progress {
+    height: 6px;
   }
 }

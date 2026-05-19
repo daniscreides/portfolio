@@ -9,7 +9,6 @@ export default function Projects() {
   return (
     <section id="projects" className="projects">
       <div className="projects-container">
-
         <div className="projects-header">
           <h2 className="projects-title">
             Meus <span className="gradient-text">Projetos</span>
@@ -17,7 +16,6 @@ export default function Projects() {
         </div>
 
         <div className="projects-grid">
-
           <a
             href="https://seu-link-blackpaladins.com"
             target="_blank"
@@ -26,7 +24,9 @@ export default function Projects() {
           >
             <img src={blackpaladins} alt="Black Paladins" />
             <div className="project-info">
-              <span className="project-tag secondary">Professional Project</span>
+              <span className="project-tag secondary">
+                Professional Project
+              </span>
               <h3>Black Paladins</h3>
               <p>Vue.js • JavaScript • Node.js</p>
             </div>
@@ -73,7 +73,6 @@ export default function Projects() {
               <p>HTML • CSS</p>
             </div>
           </a>
-
         </div>
       </div>
     </section>

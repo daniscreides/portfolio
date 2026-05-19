@@ -1,29 +1,54 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import "../style/Contact.css";
 
 export default function Contact() {
   const [sent, setSent] = useState(false);
 
+  const form = useRef();
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 3000);
+
+    emailjs
+      .sendForm(
+        "service_hwyymk9",
+        "template_contato",
+        form.current,
+        "Mis5dJsgIjNuiL6OH",
+      )
+      .then(() => {
+        setSent(true);
+
+        form.current.reset();
+
+        setTimeout(() => {
+          setSent(false);
+        }, 3000);
+      })
+      .catch((error) => {
+        console.log(error);
+        alert("Erro ao enviar mensagem");
+      });
   };
 
   return (
     <section id="contact" className="contact-section">
       <h2 className="contact-title gradient-text">Contatos</h2>
 
-      <form onSubmit={handleSubmit} className="contact-form">
+      <form ref={form} onSubmit={handleSubmit} className="contact-form">
         <div className="form-row">
           <input
             type="text"
+            name="name"
             placeholder="Name"
             required
             className="contact-input"
           />
+
           <input
             type="email"
+            name="email"
             placeholder="E-mail"
             required
             className="contact-input"
@@ -32,12 +57,14 @@ export default function Contact() {
 
         <input
           type="text"
+          name="titulo"
           placeholder="Subject"
           required
           className="contact-input full-width"
         />
 
         <textarea
+          name="message"
           placeholder="Message"
           required
           className="contact-textarea full-width"

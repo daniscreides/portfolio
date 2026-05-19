@@ -4,7 +4,6 @@ export default function Skills() {
   return (
     <section id="skills" className="skills">
       <div className="skills-container">
-
         <div className="skills-header">
           <h2 className="skills-title">
             Minhas <span className="gradient-text">Skills</span>
@@ -12,7 +11,6 @@ export default function Skills() {
         </div>
 
         <div className="skills-grid">
-
           <div className="skills-group card">
             <div className="card-header">
               <div className="card-icon gradient-1">🎨</div>
@@ -28,17 +26,23 @@ export default function Skills() {
                 <span>60%</span>
               </div>
               <div className="progress">
-                <div className="progress-fill gradient-1" style={{ width: "60%" }}></div>
+                <div
+                  className="progress-fill gradient-1"
+                  style={{ width: "60%" }}
+                ></div>
               </div>
             </div>
 
             <div className="skill-bar-item">
               <div className="skill-info">
                 <span>JavaScript</span>
-                <span>60%</span>
+                <span>50%</span>
               </div>
               <div className="progress">
-                <div className="progress-fill gradient-1" style={{ width: "60%" }}></div>
+                <div
+                  className="progress-fill gradient-1"
+                  style={{ width: "50%" }}
+                ></div>
               </div>
             </div>
 
@@ -48,7 +52,10 @@ export default function Skills() {
                 <span>85%</span>
               </div>
               <div className="progress">
-                <div className="progress-fill gradient-1" style={{ width: "85%" }}></div>
+                <div
+                  className="progress-fill gradient-1"
+                  style={{ width: "85%" }}
+                ></div>
               </div>
             </div>
 
@@ -58,7 +65,10 @@ export default function Skills() {
                 <span>30%</span>
               </div>
               <div className="progress">
-                <div className="progress-fill gradient-1" style={{ width: "30%" }}></div>
+                <div
+                  className="progress-fill gradient-1"
+                  style={{ width: "30%" }}
+                ></div>
               </div>
             </div>
           </div>
@@ -75,20 +85,26 @@ export default function Skills() {
             <div className="skill-bar-item">
               <div className="skill-info">
                 <span>Node.js</span>
-                <span>70%</span>
+                <span>50%</span>
               </div>
               <div className="progress">
-                <div className="progress-fill gradient-2" style={{ width: "70%" }}></div>
+                <div
+                  className="progress-fill gradient-2"
+                  style={{ width: "50%" }}
+                ></div>
               </div>
             </div>
 
             <div className="skill-bar-item">
               <div className="skill-info">
                 <span>Java</span>
-                <span>50%</span>
+                <span>40%</span>
               </div>
               <div className="progress">
-                <div className="progress-fill gradient-2" style={{ width: "50%" }}></div>
+                <div
+                  className="progress-fill gradient-2"
+                  style={{ width: "40%" }}
+                ></div>
               </div>
             </div>
 
@@ -98,21 +114,26 @@ export default function Skills() {
                 <span>40%</span>
               </div>
               <div className="progress">
-                <div className="progress-fill gradient-2" style={{ width: "40%" }}></div>
+                <div
+                  className="progress-fill gradient-2"
+                  style={{ width: "40%" }}
+                ></div>
               </div>
             </div>
 
             <div className="skill-bar-item">
               <div className="skill-info">
                 <span>MySQL</span>
-                <span>40%</span>
+                <span>30%</span>
               </div>
               <div className="progress">
-                <div className="progress-fill gradient-2" style={{ width: "40%" }}></div>
+                <div
+                  className="progress-fill gradient-2"
+                  style={{ width: "30%" }}
+                ></div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>

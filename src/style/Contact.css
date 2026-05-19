@@ -16,24 +16,21 @@
 }
 
 .gradient-text {
-  background: linear-gradient(
-    135deg,
-    var(--action-primary),
-    var(--action-secondary)
-  );
+  background: linear-gradient(135deg,
+      var(--action-primary),
+      var(--action-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .contact-form {
-  background: var(--bg-card); /* mais coerente que bg-secondary */
+  background: var(--bg-card);
   border: 1px solid var(--border);
   padding: 22px;
   border-radius: 18px;
   width: 100%;
   max-width: 900px;
-  height: 400px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -68,7 +65,7 @@
 .contact-input:focus,
 .contact-textarea:focus {
   border-color: var(--action-primary);
-  box-shadow: 0 0 0 3px rgba(242, 71, 56, 0.25); /* action-primary com transparência */
+  box-shadow: 0 0 0 3px rgba(242, 71, 56, 0.25);
 }
 
 .contact-button {
@@ -108,16 +105,97 @@
   justify-content: center;
 }
 
-@media (max-width: 640px) {
+@media (min-width: 1200px) {
+  .contact-section {
+    padding: 80px 40px;
+  }
+
   .contact-title {
-    font-size: 28px;
+    font-size: 42px;
+  }
+
+  .contact-form {
+    max-width: 1000px;
+    padding: 32px;
+  }
+
+  .contact-input,
+  .contact-textarea {
+    font-size: 17px;
+    padding: 18px;
+  }
+
+  .contact-button {
+    font-size: 15px;
+    padding: 12px 26px;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-section {
+    padding: 20px;
+  }
+
+  .contact-title {
+    font-size: 30px;
+    margin-bottom: 32px;
+  }
+
+  .contact-form {
+    padding: 24px;
+  }
+
+  .contact-input,
+  .contact-textarea {
+    font-size: 15px;
+    padding: 14px;
+  }
+
+  .contact-textarea {
+    min-height: 130px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 20px 20px 60px 20px;
+  }
+
+  .contact-title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .contact-form {
+    padding: 18px;
+    border-radius: 16px;
+    gap: 14px;
   }
 
   .form-row {
     flex-direction: column;
+    gap: 14px;
+  }
+
+  .contact-input,
+  .contact-textarea {
+    font-size: 14px;
+    padding: 13px;
+    border-radius: 12px;
+  }
+
+  .contact-textarea {
+    min-height: 120px;
+  }
+
+  .contact-button {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px;
   }
 
   .button-row {
+    width: 100%;
     justify-content: center;
   }
 }

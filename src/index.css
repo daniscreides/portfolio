@@ -1,20 +1,13 @@
 :root {
-  /* Tons de roxo profundo e denso */
   --bg-primary: #0F091A;    
   --bg-secondary: #1C122B;  
-  --bg-card: #251B33;       
-
+  --bg-card: #251B33;     
   --text-primary: #F4F2FF;
-  --text-secondary: #C9C2FF; /* <--- Seu novo lilás tech */
-  --text-dark: #D95032;      /* Mantendo o tom laranja/terracota */
-
-  /* Borda ajustada para um roxo médio que conversa com o lilás */
+  --text-secondary: #C9C2FF; 
+  --text-dark: #D95032;
   --border: #3D3B5C;
-
-  /* Mantendo suas cores de ação vibrantes */
   --action-primary: #F24738;
   --action-secondary: #D95032;
-
   --shadow-color: rgba(15, 9, 26, 0.8);
 }
 
