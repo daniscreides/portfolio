@@ -7,13 +7,14 @@ export default function Contact() {
   const [loading, setLoading] = useState(false);
 
   const form = useRef();
+  const isSending = useRef(false); // 🔒 trava real
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // impede múltiplos envios
-    if (loading) return;
+    if (isSending.current) return;
 
+    isSending.current = true;
     setLoading(true);
 
     try {
@@ -30,11 +31,13 @@ export default function Contact() {
       setTimeout(() => {
         setSent(false);
       }, 3000);
+
     } catch (error) {
       console.log(error);
       alert("Erro ao enviar mensagem");
     } finally {
       setLoading(false);
+      isSending.current = false;
     }
   };
 
@@ -44,51 +47,23 @@ export default function Contact() {
 
       <form ref={form} onSubmit={handleSubmit} className="contact-form">
         <div className="form-row">
-          <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            required
-            className="contact-input"
-          />
-
-          <input
-            type="email"
-            name="email"
-            placeholder="E-mail"
-            required
-            className="contact-input"
-          />
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="E-mail" required />
         </div>
 
-        <input
-          type="text"
-          name="titulo"
-          placeholder="Subject"
-          required
-          className="contact-input full-width"
-        />
+        <input type="text" name="titulo" placeholder="Subject" required />
 
-        <textarea
-          name="message"
-          placeholder="Message"
-          required
-          className="contact-textarea full-width"
-        />
+        <textarea name="message" placeholder="Message" required />
 
-        <div className="form-row button-row">
-          <button
-            type="submit"
-            className="contact-button"
-            disabled={loading}
-          >
-            {loading
-              ? "Enviando..."
-              : sent
-              ? "Mensagem enviada ✓"
-              : "ENVIAR"}
-          </button>
-        </div>
+        <button
+          type="submit"
+          disabled={loading}
+          onClick={(e) => {
+            if (loading) e.preventDefault();
+          }}
+        >
+          {loading ? "Enviando..." : sent ? "Enviado ✓" : "ENVIAR"}
+        </button>
       </form>
     </section>
   );
