@@ -4,32 +4,38 @@ import "../style/Contact.css";
 
 export default function Contact() {
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const form = useRef();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
+    // impede múltiplos envios
+    if (loading) return;
+
+    setLoading(true);
+
+    try {
+      await emailjs.sendForm(
         "service_hwyymk9",
         "template_contato",
         form.current,
-        "Mis5dJsgIjNuiL6OH",
-      )
-      .then(() => {
-        setSent(true);
+        "Mis5dJsgIjNuiL6OH"
+      );
 
-        form.current.reset();
+      setSent(true);
+      form.current.reset();
 
-        setTimeout(() => {
-          setSent(false);
-        }, 3000);
-      })
-      .catch((error) => {
-        console.log(error);
-        alert("Erro ao enviar mensagem");
-      });
+      setTimeout(() => {
+        setSent(false);
+      }, 3000);
+    } catch (error) {
+      console.log(error);
+      alert("Erro ao enviar mensagem");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -71,8 +77,16 @@ export default function Contact() {
         />
 
         <div className="form-row button-row">
-          <button type="submit" className="contact-button">
-            {sent ? "Mensagem enviada ✓" : "ENVIAR"}
+          <button
+            type="submit"
+            className="contact-button"
+            disabled={loading}
+          >
+            {loading
+              ? "Enviando..."
+              : sent
+              ? "Mensagem enviada ✓"
+              : "ENVIAR"}
           </button>
         </div>
       </form>
