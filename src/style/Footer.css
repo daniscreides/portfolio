@@ -69,25 +69,6 @@
   transform: translateY(0);
 }
 
-@media (min-width: 1200px) {
-  .footer {
-    padding: 28px 40px;
-  }
-
-  .footer-text,
-  .footer-link {
-    font-size: 15px;
-  }
-
-  .footer-links {
-    gap: 60px;
-  }
-
-  .icon-link img {
-    width: 56px;
-    height: 56px;
-  }
-}
 
 @media (max-width: 900px) {
   .footer {

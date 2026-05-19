@@ -77,24 +77,6 @@
   object-fit: contain;
 }
 
-@media (min-width: 1200px) {
-  .nav-container {
-    padding: 20px 40px;
-  }
-
-  .logo {
-    font-size: 28px;
-  }
-
-  .nav-links {
-    gap: 42px;
-  }
-
-  .nav-link {
-    font-size: 17px;
-  }
-}
-
 @media (max-width: 900px) {
   .nav-container {
     padding: 14px 20px;

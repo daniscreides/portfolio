@@ -125,34 +125,6 @@
   -webkit-text-fill-color: transparent;
 }
 
-@media (min-width: 1200px) {
-  .projects {
-    padding: 80px 40px;
-  }
-
-  .projects-title {
-    font-size: 42px;
-  }
-
-  .projects-grid {
-    max-width: 1200px;
-    gap: 36px;
-  }
-
-  .project-card {
-    width: 500px;
-    height: 260px;
-  }
-
-  .project-info h3 {
-    font-size: 22px;
-  }
-
-  .project-info p {
-    font-size: 14px;
-  }
-}
-
 @media (max-width: 900px) {
   .projects {
     padding: 60px 20px;
