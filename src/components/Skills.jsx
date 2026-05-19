@@ -1,3 +1,5 @@
+import frontendIcon from "../assets/imagens/front.png";
+import backendIcon from "../assets/imagens/backend.png";
 import "../style/Skills.css";
 
 export default function Skills() {
@@ -13,7 +15,9 @@ export default function Skills() {
         <div className="skills-grid">
           <div className="skills-group card">
             <div className="card-header">
-              <div className="card-icon gradient-1">🎨</div>
+              <div className="card-icon gradient-1">
+                <img src={frontendIcon} alt="Frontend" width="24" height="24" />
+              </div>
               <div>
                 <h3 className="skills-group-title">FRONTEND</h3>
                 <p className="card-subtitle">Interface & Experience</p>
@@ -49,12 +53,12 @@ export default function Skills() {
             <div className="skill-bar-item">
               <div className="skill-info">
                 <span>HTML/CSS</span>
-                <span>85%</span>
+                <span>75%</span>
               </div>
               <div className="progress">
                 <div
                   className="progress-fill gradient-1"
-                  style={{ width: "85%" }}
+                  style={{ width: "75%" }}
                 ></div>
               </div>
             </div>
@@ -75,7 +79,9 @@ export default function Skills() {
 
           <div className="skills-group card">
             <div className="card-header">
-              <div className="card-icon gradient-2">⚙️</div>
+              <div className="card-icon gradient-2">
+                <img src={backendIcon} alt="Backend" width="24" height="24" />
+              </div>
               <div>
                 <h3 className="skills-group-title">BACKEND</h3>
                 <p className="card-subtitle">Server & APIs</p>

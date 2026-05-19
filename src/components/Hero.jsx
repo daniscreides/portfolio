@@ -1,3 +1,4 @@
+import seta from "../assets/imagens/setabranca.png";
 import "../style/Hero.css";
 
 export default function Hero() {
@@ -33,17 +34,15 @@ export default function Hero() {
       </div>
 
       <div className="scroll-indicator">
-        <svg
-          width="40"
-          height="40"
-          viewBox="0 0 26 26"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          opacity="0.5"
-        >
-          <path d="M12 5v14M5 12l7 7 7-7" />
-        </svg>
+        <a href="#about">
+          <img
+            src={seta}
+            alt="Scroll down"
+            width="40"
+            height="40"
+            style={{ opacity: 0.5 }}
+          />
+        </a>
       </div>
     </section>
   );

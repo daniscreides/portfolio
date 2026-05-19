@@ -98,6 +98,11 @@
   font-size: 20px;
   color: var(--text-primary);
 }
+.card-icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
 
 .gradient-1 {
   background: linear-gradient(135deg,
