@@ -1,0 +1,66 @@
+{
+  "about.title.normal": "Sobre",
+  "about.title.gradient": "Mim",
+
+  "about.info": "30 anos • Autista • Brasil • Mãe da Luna",
+
+  "about.description": "Apaixonada por tecnologia, o que começou como curiosidade agora é a base da minha jornada para me tornar uma desenvolvedora fullstack. Como iniciante, estou me aprofundando cada vez mais na construção de soluções completas que fazem a diferença.",
+
+  "hero.welcome": "Bem-Vindo ao meu portfolio.",
+
+  "hero.subtitle": "FullStack Developer",
+
+  "hero.description": "Transformar ideias em código e criar soluções que fazem a diferença.",
+
+  "hero.projects": "Ver Projetos",
+
+  "hero.contact": "Entre em contato",
+
+  "navbar.home": "Início",
+
+  "navbar.about": "Sobre",
+
+  "navbar.projects": "Projetos",
+
+  "navbar.skills": "Skills",
+
+  "navbar.contact": "Contatos",
+
+  "contact.title": "Contatos",
+
+  "contact.name": "Nome",
+
+  "contact.email": "E-mail",
+
+  "contact.subject": "Assunto",
+
+  "contact.message": "Mensagem",
+
+  "contact.sending": "Enviando...",
+
+  "contact.sent": "Enviado ✓",
+
+  "contact.send": "ENVIAR",
+
+  "contact.error": "Erro ao enviar mensagem",
+
+  "footer.rights": "Todos os direitos reservados.",
+
+  "projects.title.normal": "Meus",
+
+  "projects.title.gradient": "Projetos",
+
+  "projects.professional": "Projeto Profissional",
+
+  "projects.personal": "Projeto Pessoal",
+
+  "projects.construction": "🚧 Projeto em construção.",
+
+  "skills.title.normal": "Minhas",
+
+  "skills.title.gradient": "Skills",
+
+  "skills.frontend.subtitle": "Interface & Experiência",
+
+  "skills.backend.subtitle": "Servidor & APIs"
+}

@@ -1,9 +1,12 @@
+import { useTranslation } from "react-i18next";
 import "../style/Navbar.css";
 
 import menuIcon from "../assets/imagens/menu.png";
 import closeIcon from "../assets/imagens/x.png";
 
 export default function Navbar({ menuOpen, setMenuOpen }) {
+  const { t } = useTranslation();
+
   return (
     <nav className={`navbar ${menuOpen ? "menu-open" : ""}`}>
       <div className="nav-container">
@@ -14,7 +17,10 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
         </a>
 
         <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-          <button className="close-menu-btn" onClick={() => setMenuOpen(false)}>
+          <button
+            className="close-menu-btn"
+            onClick={() => setMenuOpen(false)}
+          >
             <img src={closeIcon} alt="Fechar menu" className="menu-icon" />
           </button>
 
@@ -23,7 +29,7 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
             className="nav-link"
             onClick={() => setMenuOpen(false)}
           >
-            Início
+            {t("navbar.home")}
           </a>
 
           <a
@@ -31,7 +37,7 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
             className="nav-link"
             onClick={() => setMenuOpen(false)}
           >
-            Sobre
+            {t("navbar.about")}
           </a>
 
           <a
@@ -39,7 +45,7 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
             className="nav-link"
             onClick={() => setMenuOpen(false)}
           >
-            Projetos
+            {t("navbar.projects")}
           </a>
 
           <a
@@ -47,7 +53,7 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
             className="nav-link"
             onClick={() => setMenuOpen(false)}
           >
-            Skills
+            {t("navbar.skills")}
           </a>
 
           <a
@@ -55,12 +61,15 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
             className="nav-link"
             onClick={() => setMenuOpen(false)}
           >
-            Contatos
+            {t("navbar.contact")}
           </a>
         </div>
 
         {!menuOpen && (
-          <button className="mobile-menu-btn" onClick={() => setMenuOpen(true)}>
+          <button
+            className="mobile-menu-btn"
+            onClick={() => setMenuOpen(true)}
+          >
             <img src={menuIcon} alt="Abrir menu" className="menu-icon" />
           </button>
         )}

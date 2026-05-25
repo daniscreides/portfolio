@@ -22,8 +22,8 @@
 }
 
 .circle-1 {
-  width: 400px;
-  height: 400px;
+  width: 450px;
+  height: 450px;
   top: 25%;
   left: 25%;
   background: radial-gradient(circle,
@@ -32,8 +32,8 @@
 }
 
 .circle-2 {
-  width: 350px;
-  height: 350px;
+  width: 400px;
+  height: 400px;
   bottom: 25%;
   right: 25%;
   background: radial-gradient(circle,

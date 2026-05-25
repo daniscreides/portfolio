@@ -1,8 +1,11 @@
 import React, { useState, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser";
 import "../style/Contact.css";
 
 export default function Contact() {
+  const { t } = useTranslation();
+
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -34,7 +37,7 @@ export default function Contact() {
 
     } catch (error) {
       console.log(error);
-      alert("Erro ao enviar mensagem");
+      alert(t("contact.error"));
     } finally {
       setLoading(false);
       isSending.current = false;
@@ -43,15 +46,21 @@ export default function Contact() {
 
   return (
     <section id="contact" className="contact-section">
-      <h2 className="contact-title gradient-text">Contatos</h2>
+      <h2 className="contact-title gradient-text">
+        {t("contact.title")}
+      </h2>
 
-      <form ref={form} onSubmit={handleSubmit} className="contact-form">
+      <form
+        ref={form}
+        onSubmit={handleSubmit}
+        className="contact-form"
+      >
 
         <div className="form-row">
           <input
             type="text"
             name="name"
-            placeholder="Name"
+            placeholder={t("contact.name")}
             required
             className="contact-input"
           />
@@ -59,7 +68,7 @@ export default function Contact() {
           <input
             type="email"
             name="email"
-            placeholder="E-mail"
+            placeholder={t("contact.email")}
             required
             className="contact-input"
           />
@@ -68,14 +77,14 @@ export default function Contact() {
         <input
           type="text"
           name="titulo"
-          placeholder="Subject"
+          placeholder={t("contact.subject")}
           required
           className="contact-input full-width"
         />
 
         <textarea
           name="message"
-          placeholder="Message"
+          placeholder={t("contact.message")}
           required
           className="contact-textarea"
         />
@@ -86,7 +95,11 @@ export default function Contact() {
             className="contact-button"
             disabled={loading}
           >
-            {loading ? "Enviando..." : sent ? "Enviado ✓" : "ENVIAR"}
+            {loading
+              ? t("contact.sending")
+              : sent
+              ? t("contact.sent")
+              : t("contact.send")}
           </button>
         </div>
 

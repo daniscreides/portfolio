@@ -1,25 +1,30 @@
+import { useTranslation } from "react-i18next";
 import "../style/About.css";
 
 export default function About() {
+  const { t } = useTranslation();
+
   return (
     <section id="about" className="about">
       <div className="about-container">
         <div className="about-grid">
           <div className="about-content">
+
             <h2 className="about-title">
-              Sobre <span className="gradient-text">Mim</span>
+              {t("about.title.normal")}{" "}
+              <span className="gradient-text">
+                {t("about.title.gradient")}
+              </span>
             </h2>
 
             <p className="gradient-text-sobre">
-              30 anos • Autista • Brasil • Mãe da Luna
+              {t("about.info")}
             </p>
 
             <p className="about-description">
-              Apaixonada por tecnologia, o que começou como curiosidade agora é
-              a base da minha jornada para me tornar um desenvolvedora
-              fullstack. Como iniciante, estou me aprofundando cada vez mais na
-              construção de soluções completas que fazem a diferença.
+              {t("about.description")}
             </p>
+
           </div>
         </div>
       </div>

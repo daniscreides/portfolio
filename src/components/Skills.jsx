@@ -1,14 +1,20 @@
+import { useTranslation } from "react-i18next";
 import frontendIcon from "../assets/imagens/front.png";
 import backendIcon from "../assets/imagens/backend.png";
 import "../style/Skills.css";
 
 export default function Skills() {
+  const { t } = useTranslation();
+
   return (
     <section id="skills" className="skills">
       <div className="skills-container">
         <div className="skills-header">
           <h2 className="skills-title">
-            Minhas <span className="gradient-text">Skills</span>
+            {t("skills.title.normal")}{" "}
+            <span className="gradient-text">
+              {t("skills.title.gradient")}
+            </span>
           </h2>
         </div>
 
@@ -16,11 +22,20 @@ export default function Skills() {
           <div className="skills-group card">
             <div className="card-header">
               <div className="card-icon gradient-1">
-                <img src={frontendIcon} alt="Frontend" width="24" height="24" />
+                <img
+                  src={frontendIcon}
+                  alt="Frontend"
+                  width="24"
+                  height="24"
+                />
               </div>
+
               <div>
                 <h3 className="skills-group-title">FRONTEND</h3>
-                <p className="card-subtitle">Interface & Experience</p>
+
+                <p className="card-subtitle">
+                  {t("skills.frontend.subtitle")}
+                </p>
               </div>
             </div>
 
@@ -29,6 +44,7 @@ export default function Skills() {
                 <span>React</span>
                 <span>60%</span>
               </div>
+
               <div className="progress">
                 <div
                   className="progress-fill gradient-1"
@@ -42,6 +58,7 @@ export default function Skills() {
                 <span>JavaScript</span>
                 <span>50%</span>
               </div>
+
               <div className="progress">
                 <div
                   className="progress-fill gradient-1"
@@ -55,6 +72,7 @@ export default function Skills() {
                 <span>HTML/CSS</span>
                 <span>75%</span>
               </div>
+
               <div className="progress">
                 <div
                   className="progress-fill gradient-1"
@@ -68,6 +86,7 @@ export default function Skills() {
                 <span>Vue.js</span>
                 <span>30%</span>
               </div>
+
               <div className="progress">
                 <div
                   className="progress-fill gradient-1"
@@ -80,11 +99,20 @@ export default function Skills() {
           <div className="skills-group card">
             <div className="card-header">
               <div className="card-icon gradient-2">
-                <img src={backendIcon} alt="Backend" width="24" height="24" />
+                <img
+                  src={backendIcon}
+                  alt="Backend"
+                  width="24"
+                  height="24"
+                />
               </div>
+
               <div>
                 <h3 className="skills-group-title">BACKEND</h3>
-                <p className="card-subtitle">Server & APIs</p>
+
+                <p className="card-subtitle">
+                  {t("skills.backend.subtitle")}
+                </p>
               </div>
             </div>
 
@@ -93,6 +121,7 @@ export default function Skills() {
                 <span>Node.js</span>
                 <span>50%</span>
               </div>
+
               <div className="progress">
                 <div
                   className="progress-fill gradient-2"
@@ -106,6 +135,7 @@ export default function Skills() {
                 <span>Java</span>
                 <span>40%</span>
               </div>
+
               <div className="progress">
                 <div
                   className="progress-fill gradient-2"
@@ -119,6 +149,7 @@ export default function Skills() {
                 <span>Python</span>
                 <span>40%</span>
               </div>
+
               <div className="progress">
                 <div
                   className="progress-fill gradient-2"
@@ -132,6 +163,7 @@ export default function Skills() {
                 <span>MySQL</span>
                 <span>30%</span>
               </div>
+
               <div className="progress">
                 <div
                   className="progress-fill gradient-2"

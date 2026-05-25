@@ -1,0 +1,67 @@
+{
+  "about.title.normal": "About",
+
+  "about.title.gradient": "Me",
+
+  "about.info": "30 years old • Autistic • Brazil • Luna's mother",
+
+  "about.description": "Passionate about technology, what started as curiosity has become the foundation of my journey to becoming a fullstack developer. As a beginner, I am constantly deepening my knowledge in building complete solutions that make a difference.",
+
+  "hero.welcome": "Welcome to my portfolio.",
+
+  "hero.subtitle": "FullStack Developer",
+
+  "hero.description": "Transforming ideas into code and creating solutions that make a difference.",
+
+  "hero.projects": "View Projects",
+
+  "hero.contact": "Contact Me",
+
+  "navbar.home": "Home",
+
+  "navbar.about": "About",
+
+  "navbar.projects": "Projects",
+
+  "navbar.skills": "Skills",
+
+  "navbar.contact": "Contact",
+
+  "contact.title": "Contact",
+
+  "contact.name": "Name",
+
+  "contact.email": "E-mail",
+
+  "contact.subject": "Subject",
+
+  "contact.message": "Message",
+
+  "contact.sending": "Sending...",
+
+  "contact.sent": "Sent ✓",
+
+  "contact.send": "SEND",
+
+  "contact.error": "Error sending message",
+
+  "footer.rights": "All rights reserved.",
+
+  "projects.title.normal": "My",
+
+  "projects.title.gradient": "Projects",
+
+  "projects.professional": "Professional Project",
+
+  "projects.personal": "Personal Project",
+
+  "projects.construction": "🚧 Project under construction.",
+
+  "skills.title.normal": "My",
+
+  "skills.title.gradient": "Skills",
+
+  "skills.frontend.subtitle": "Interface & Experience",
+
+  "skills.backend.subtitle": "Server & APIs"
+}
