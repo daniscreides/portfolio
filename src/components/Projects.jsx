@@ -6,6 +6,12 @@ import jojo from "../assets/imagens/jojo.png";
 import blackpaladins from "../assets/imagens/bp.png";
 
 export default function Projects() {
+  const handleConstruction = (e) => {
+    e.preventDefault();
+
+    alert("🚧 Projeto em construção.");
+  };
+
   return (
     <section id="projects" className="projects">
       <div className="projects-container">
@@ -16,12 +22,7 @@ export default function Projects() {
         </div>
 
         <div className="projects-grid">
-          <a
-            href="https://seu-link-blackpaladins.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="project-card"
-          >
+          <a href="#" className="project-card" onClick={handleConstruction}>
             <img src={blackpaladins} alt="Black Paladins" />
             <div className="project-info">
               <span className="project-tag secondary">
